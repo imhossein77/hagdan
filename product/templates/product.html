@@ -1,0 +1,332 @@
+{% extends 'basewhitoutfooter.html' %}
+{% load static %}
+
+{% block content %}
+    <body style="direction:rtl;">
+    <main class="page product-page">
+        <section class="clean-block clean-product dark" style="margin-bottom: 34px;">
+            <div class="container">
+                <div class="block-content" style="padding-top: 100px;">
+                    <div class="product-info">
+                        <div class="row" style="padding: 26px;">
+                            <div class="col-md-6"
+                                 style="border-bottom: 1.4px solid rgb(129,129,129);padding: 18px;background: #efefef;">
+                                <div class="gallery">
+                                    <div id="product-preview" class="vanilla-zoom">
+                                        <div class="zoomed-image"
+                                             style="height: 472px;background: url('{{ Product.photo.url }}') center / cover no-repeat;"></div>
+                                        <div class="float-start d-lg-flex sidebar" style="width: 184px;height: 64px;">
+                                            <img class="img-fluid d-block small-preview"
+                                                 src="{{ Product.photo.url }}"><img
+                                                class="img-fluid d-block small-preview"
+                                                src="{{ Product.photo.url }}"><img
+                                                class="img-fluid d-block small-preview" src="{{ Product.photo.url }}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6" style="padding: 20px;">
+                                <div class="media-body">
+                                    <p class="text-start d-inline-block d-lg-flex align-items-lg-end"><a
+                                            href="index.html" style="font-size: 19px;">خانه</a><span
+                                            style="color: rgb(35,126,3);font-size: 19px;">&nbsp;/&nbsp;</span><a
+                                            href="products.html" style="font-size: 19px;">نمایشگاه خرما</a><span
+                                            style="color: rgb(35,126,3);font-size: 19px;">&nbsp;/&nbsp;</span><a
+                                            href="products.html"
+                                            style="font-size: 19px;">{{ Product.date_type }}</a><span
+                                            style="color: rgb(35,126,3);font-size: 19px;">&nbsp;/&nbsp;</span><a
+                                            href="#" style="color: rgb(0,0,0);font-size: 19px;">{{ Product.id }}</a></p>
+                                </div>
+                                <div class="info">
+                                    <h1 class="display-3" style="text-align: right;font-size: 18px;"><a
+                                            href="#"><strong>{{ Product.date_type }}</strong></a><br></h1>
+                                    <h3 style="text-align: right;font-size: 15px;color: rgb(79,79,79);">دسته بندی :&nbsp;<span><a
+                                            href="products.html"><strong>{{ Product.date_type }}</strong></a><br></span>
+                                    </h3>
+                                    <div class="price"></div>
+                                    <hr>
+                                    <div class="summary">
+                                        <p style="text-align: right;color: rgb(89,92,92);">{{ Product.description }}</p>
+                                    </div>
+                                    <div class="product-rating" style="text-align: right;"><span
+                                            style="color: rgb(35,126,3);">کیفیت :&nbsp;</span>
+
+                                        <i class="fa fa-star" style="color: rgb(240,153,17);"></i>
+                                        <i class="fa fa-star" style="color: rgb(240,153,17);"></i>
+                                        <i class="fa fa-star" style="color: rgb(240,153,17);"></i>
+                                        <i class="fa fa-star" style="color: rgb(240,153,17);"></i>
+                                        <i class="fa fa-star" style="color: rgb(240,153,17);"></i>
+
+
+                                    </div>
+
+                                    <div class="col-6 float-start">
+                                        <p class="product-price"
+                                           style="margin-bottom: 4px;text-decoration: line-through;font-style: italic;color: rgb(177,177,177);width: 63.262px;font-size: 16px;">{{ Product.price }} </p>
+                                        <p class="product-price"
+                                           style="margin-bottom: 4px;width: 66.262px;color: rgb(68,69,69);font-size: 16px;">{{ Product.price }}<span>&nbsp;ریال</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="d-lg-flex align-items-lg-end" id="modal-open" style="margin-bottom: 34px;">
+                                    <div class="modal fade" role="dialog" tabindex="-1" id="exampleModal"
+                                         aria-labelledby="exampleModalLabel" style="padding: 11px;padding-top: 44px;">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h4>&nbsp;خرید محصول&nbsp;</h4>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                            aria-label="Close" data-bs-target="#exampleModal"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p style="color: rgb(113,113,113);">لطفا پیش سفارش خود را وارد کنید
+                                                        ، پس از بررسی با شما تماس گرفته میشود</p>
+                                                    <div class="row register-form">
+                                                        <div class="col-md-8 offset-md-2"
+                                                             style="margin-left: 0px;width: 100%;">
+                                                            <form method="post"  enctype="multipart/form-data" class="custom-form" style="margin: 0px;">
+                                                                <h1>فرم ثبت پیش سفارش</h1>
+                                                                <div class="row form-group">
+                                                                    <div class="col-sm-4 label-column"
+                                                                         style="text-align: right;"><label
+                                                                            class="col-form-label"
+                                                                            for="name-input-field"
+                                                                            style="text-align: right;">نام و نام
+                                                                        خانوادگی</label></div>
+                                                                    <div class="col-sm-6 input-column"><input
+                                                                            name="name" class="form-control" type="text"
+                                                                            required=""></div>
+                                                                </div>
+                                                                <div class="row form-group">
+                                                                    <div class="col-sm-4 label-column"
+                                                                         style="text-align: right;"><label
+                                                                            class="col-form-label"
+                                                                            for="email-input-field"
+                                                                            style="text-align: right;">ایمیل(اختیاری)</label>
+                                                                    </div>
+                                                                    <div class="col-sm-6 input-column"><input
+                                                                            name="email" class="form-control"
+                                                                            type="email"></div>
+                                                                </div>
+                                                                <div class="row form-group">
+                                                                    <div class="col-sm-4 label-column"
+                                                                         style="text-align: right;"><label
+                                                                            class="col-form-label"
+                                                                            for="pawssword-input-field"
+                                                                            style="text-align: right;">شماره
+                                                                        تماس</label></div>
+                                                                    <div class="col-sm-6 input-column"><input
+                                                                            name="phone" class="form-control"
+                                                                            type="password" required=""></div>
+                                                                </div>
+                                                                <div class="row form-group">
+                                                                    <div class="col-sm-4 label-column"
+                                                                         style="text-align: right;"><label
+                                                                            class="col-form-label"
+                                                                            for="pawssword-input-field"
+                                                                            style="text-align: right;">تناژ درخواستی
+                                                                        ازین محصول</label></div>
+                                                                    <div class="col-sm-6 input-column"><input
+                                                                            name="Product_tonnage" class="form-control"
+                                                                            type="password" required=""></div>
+                                                                </div>
+                                                                <div class="form-check d-table"
+                                                                     style="text-align: right;"><input
+                                                                        class="form-check-input" type="checkbox"
+                                                                        id="formCheck-2" required=""><label
+                                                                        class="form-check-label" for="formCheck-2">قوانین
+                                                                    را میپذیرم</label></div>
+                                                                <button class="btn btn-light shadow-lg submit-button"
+                                                                        type="button" style="border-radius: 8px;" >ثبت
+                                                                    پیش سفارش
+                                                                </button>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button class="btn btn-warning shadow"
+                                                            style="background: #ff574d;color: rgb(255,253,253);border-bottom-width: 0px;border-radius: 9px;"
+                                                            type="button" data-bs-dismiss="modal">منصرف شدم
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-warning" type="button" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal"
+                                            style="background: rgb(55,99,244);color: rgb(237,226,226);margin-top: 9px;border-radius: 8px;border-width: 0px;border-bottom-width: 0px;border-bottom-color: var(--bs-blue);">
+                                        <i class="icon-basket"></i>&nbsp;ثبت پیش سفارش
+                                    </button>
+                                </div>
+                                <div class="d-flex media">
+                                    <div class="media-body" style="margin-top: -15px;">
+                                        <h4></h4>
+                                        <ul class="list-unstyled fa-ul">
+                                            <li class="d-table"><a href="#">اشتراک گذاری</a><i
+                                                    class="fa fa-group fa-li text-primary"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <ul class="nav nav-tabs" role="tablist" id="myTab">
+                                <li class="nav-item" role="presentation"><a class="nav-link active" role="tab"
+                                                                            data-bs-toggle="tab"
+                                                                            id="specifications-tabs"
+                                                                            href="#specifications"
+                                                                            style="background: rgb(55,99,244);color: rgb(255,255,255);height: 32.4px;padding: 5.0004px 12.005px;">ویژگی
+                                    های محصول</a></li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active specifications" role="tabpanel"
+                                     id="specifications">
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                            <tbody>
+                                            <tr>
+                                                <td class="stat">ویژگی ها</td>
+                                                <td>{{ Product.size }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="stat">میزان رطوبت<br></td>
+                                                <td>{{ Product.color_type }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="stat">تاریخ برداشت<br></td>
+                                                <td>{{ Product.Around_the_harvest_date }}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="stat">تناژ<br></td>
+                                                <td>{{ Product.Product_tonnage }}</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <hr>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-end clean-related-items"><small class="form-text text-end"
+                                                                     style="border-bottom-style: solid;border-bottom-color: rgb(117,166,255);font-size: 18px;font-weight: bold;">محصولات
+                        مرتبط&nbsp;</small>
+                        <div class="items" style="margin-top: 13px;">
+                            <div class="row product-list" style="margin-top: 0px;margin-right: 0px;margin-left: 0px;">
+                                {% for pl in ppp %}
+                                    <div class="col-sm-6 col-md-4 product-item"
+                                         style="margin-right: 0px;margin-left: 0px;">
+                                        <div class="shadow product-container">
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="container">
+                                                        <div class="row justify-content-center align-items-center fbox3">
+                                                            <div class="col-auto col-sm-4 d-flex justify-content-center align-items-center align-items-lg-center"
+                                                                 style="width: 100%;"><a data-fancybox="gallery"
+                                                                                         href="#"><img class="img-fluid"
+                                                                                                       src="{{ pl.photo.url }}"
+                                                                                                       alt="Hero Image Music"></a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row fbox3">
+                                                            <div class="col-6 col-sm-4 d-flex justify-content-center align-items-center align-items-lg-center">
+                                                                <a data-fancybox="gallery" href="#"><img
+                                                                        class="img-fluid" src="{{ pl.photo.url }}"
+                                                                        alt="Hero Image Music"></a></div>
+                                                            <div class="col-6 col-sm-4 d-flex justify-content-center align-items-center">
+                                                                <a data-fancybox="gallery" href="#"><img
+                                                                        class="img-fluid" src="{{ pl.photo.url }}"
+                                                                        alt="Hero Image Photography"></a></div>
+                                                            <div class="col-6 col-sm-4 d-flex justify-content-center align-items-center">
+                                                                <a data-fancybox="gallery" href="#"><img
+                                                                        class="img-fluid" src="{{ pl.photo.url }}"
+                                                                        alt="Hero Image Photography"></a></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-8">
+                                                    <h2 style="margin-top: 16px;"><a href="#">{{ pl.date_type }}</a>
+                                                    </h2>
+                                                </div>
+                                                <div class="col-4"><a class="small-text"
+                                                                      href="#">{{ pl.Crop_location }} </a></div>
+                                            </div>
+                                            <div class="product-rating" style="text-align: right;"><span
+                                                    style="color: rgb(35,126,3);">کیفیت :&nbsp;</span><i
+                                                    class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                                    class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                                    class="fa fa-star"></i></div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <p class="product-description"
+                                                       style="margin-bottom: 0px;margin-top: 3px;text-align: right;">
+                                                        میزان رطوبت :&nbsp;<span>{{ pl.color_type }}</span></p>
+                                                    <p class="product-description"
+                                                       style="margin-bottom: 0px;margin-top: 0px;text-align: right;">
+                                                        تاریخ برداشت
+                                                        :&nbsp;<span>{{ pl.Around_the_harvest_date }}</span></p>
+                                                    <p class="product-description"
+                                                       style="margin-bottom: 8px;margin-top: 0px;text-align: right;">
+                                                        تناژ :&nbsp;<span>{{ pl.Product_tonnage }}</span></p>
+                                                    <div class="row" style="border-top: 1.4px solid rgb(43,153,255) ;">
+                                                        <div class="col-6">
+                                                            <button class="btn btn-light" type="button"
+                                                                    style="margin-top: 6px;">ثبت خرید
+                                                            </button>
+                                                        </div>
+                                                        <div class="col-6 float-start">
+                                                            <p class="product-price"
+                                                               style="margin-bottom: 4px;text-decoration: line-through;font-style: italic;color: rgb(177,177,177);width: 63.262px;">{{ pl.price }} </p>
+                                                            <p class="product-price"
+                                                               style="margin-bottom: 4px;width: 66.262px;">{{ pl.price }}<span>&nbsp;ریال</span>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <a class="d-md-flex justify-content-md-center align-items-md-center" id="wp" target="_blank"
+       style="background-color: #5bbf21;width: 50px;height: 50px;"><i
+            class="fa fa-whatsapp d-md-flex justify-content-md-center align-items-md-center"
+            style="margin-right: 0px;"></i></a>
+    <div class="row p-0 m-0">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 d-flex justify-content-center align-items-center align-content-center p-0 m-0"
+             style="border-bottom-width: 1.4px;border-bottom-style: solid;">
+            <p class="p-0 m-0" style="color: #008c0e;">با ما در ارتباط باشید</p><a class="p-0 m-2 d-inline-block"
+                                                                                   href="https://twitter.com/OmoldsCo"
+                                                                                   target="_blank">
+            <h3><i class="fa fa-telegram" style="color: #008c0e;"></i></h3>
+        </a><a class="p-0 m-2 d-inline-block" href="https://plus.google.com/u/0/114804899141677023355" target="_blank">
+            <h3><i class="fa fa-google-plus" style="color: #008c0e;"></i></h3>
+        </a><a class="p-0 m-2 d-inline-block" href="https://www.youtube.com/channel/UCO8bVpiYLrkNhxoQUdyIYEQ"
+               target="_blank">
+            <h3><i class="fa fa-instagram" style="color: #008c0e;"></i></h3>
+        </a>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 align-self-center p-0 m-0"><a class="link-dark"
+                                                                                               href="https://www.jav.com"
+                                                                                               target="_blank">
+            <h6 class="text-center p-0 m-2" style="color: rgb(0,81,162);">تمامی حقوق مادی و معنوی برای جناب حقدان محفوظ
+                است طراحی این اپلیکیشن توسط شرکت فنی مهندسی JAV&nbsp;انجام شده است</h6>
+        </a></div>
+    </div>
+    =
+    </body>
+
+    </html>
+{% endblock content %}

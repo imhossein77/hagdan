@@ -1,0 +1,215 @@
+{% extends 'basewhitoutfooter.html' %}
+{% load static %}
+
+{% block content %}
+    <body style="direction:rtl;">
+    <section class="py-4 py-xl-5" style="margin-top: 68px;">
+        <div class="container">
+            <div class="bg-dark border rounded border-0 border-dark overflow-hidden">
+                <div class="row g-0">
+                    <div class="col-md-6">
+                        <div class="text-white p-4 p-md-5">
+                            <h2 class="fw-bold text-white mb-3">دیگران کاشتند و ما خوردیم</h2>
+                            <h2 class="fw-bold text-white mb-3">ما بکاریم تا دیگران بخورند</h2>
+                            <p class="mb-4">&nbsp;هر کس در جهت رشد کشور خود وظیفه ای دارد بیاید تا با سهیم شدن آورده های
+                                خویش به رشد جامعه و اقتصاد و محیط زیست خود کمک کنیم&nbsp;</p>
+                            <div class="accordion" role="tablist" id="accordion-1">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header panel-title mb-0" role="tab">
+                                        <button class="accordion-button collapsed collapsed" data-bs-toggle="collapse"
+                                                data-bs-target="#accordion-1 .item-1" aria-expanded="false"
+                                                aria-controls="accordion-1 .item-1"><i class="fa fa-comments"></i>&nbsp;آورده
+                                            ها در چه جهت استفاده میشود ؟&nbsp;
+                                        </button>
+                                    </h2>
+                                    <div class="accordion-collapse collapse item-1" role="tabpanel"
+                                         data-bs-parent="#accordion-1">
+                                        <div class="accordion-body">
+                                            <p style="color: rgb(54,54,54);">سلام</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header panel-title mb-0" role="tab">
+                                        <button class="accordion-button collapsed collapsed" data-bs-toggle="collapse"
+                                                data-bs-target="#accordion-1 .item-2" aria-expanded="false"
+                                                aria-controls="accordion-1 .item-2"><i class="fa fa-comments"></i>&nbsp;چگونه
+                                            میتوانم کمک کنم ؟&nbsp;
+                                        </button>
+                                    </h2>
+                                    <div class="accordion-collapse collapse item-2" role="tabpanel"
+                                         data-bs-parent="#accordion-1">
+                                        <div class="accordion-body">
+                                            <p style="color: rgb(54,54,54);">سلام</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header panel-title mb-0" role="tab">
+                                        <button class="accordion-button collapsed collapsed" data-bs-toggle="collapse"
+                                                data-bs-target="#accordion-1 .item-3" aria-expanded="false"
+                                                aria-controls="accordion-1 .item-3"><i class="fa fa-comments"></i>&nbsp;هدف
+                                            از اینکار چیست ؟&nbsp;
+                                        </button>
+                                    </h2>
+                                    <div class="accordion-collapse collapse item-3" role="tabpanel"
+                                         data-bs-parent="#accordion-1">
+                                        <div class="accordion-body">
+                                            <p style="color: rgb(54,54,54);">سلام</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 order-first order-md-last" style="min-height: 250px;"><img
+                            class="w-100 h-100 fit-cover" src="{% static 'assets/img/success.jpg' %}"
+                            style="padding: 38px;border-radius: 51px;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="row register-form" style="margin-right: 0px;margin-left: 0px;margin-top: 0px;">
+        <div class="col-12 col-md-8 offset-md-2" style="margin-left: 0px;width: 100%;">
+            <form method="post" enctype="multipart/form-data" class="custom-form" style="padding: 21px;margin: 0px;">
+                {% csrf_token %}
+                <h1 style="color: rgb(76, 86, 94);">فرم ثبت آورده ها</h1>
+                <div class="row form-group" style="margin-bottom: 3px;">
+                    <div class="col-sm-4 label-column" style="text-align: right;width: 373.012px;"><label
+                            class="col-form-label" for="email-input-field"
+                            style="color: rgb(22,159,0);font-size: 13px;">طفا تمامی فیلد های ستاره دار * را
+                        پرکنید<br></label></div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-sm-4 label-column" style="text-align: right;"><label class="col-form-label"
+                                                                                         for="name-input-field">عنوان
+                        (عنوان آورده خود را وارد مطرح کنید) *<br></label></div>
+                    <div class="col-sm-6 input-column"><input name="typer" class="form-control" type="text" required="">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-sm-4 label-column" style="text-align: right;"><label class="col-form-label"
+                                                                                         for="email-input-field">نام و
+                        نام خانوادگی*<br></label></div>
+                    <div class="col-sm-6 input-column"><input name="name" class="form-control" type="text" required="">
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-sm-4 label-column" style="text-align: right;"><label class="col-form-label"
+                                                                                         for="pawssword-input-field">شماره
+                        تماس *<br></label></div>
+                    <div class="col-sm-6 input-column"><input name="phone" class="form-control" type="number"
+                                                              required=""></div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-sm-4 label-column" style="text-align: right;"><label class="col-form-label"
+                                                                                         for="pawssword-input-field">ایمیل<br></label>
+                    </div>
+                    <div class="col-sm-6 input-column"><input name="email" class="form-control" type="email"></div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-sm-4 label-column" style="text-align: right;"><label class="col-form-label"
+                                                                                         for="dropdown-input-field">آورده
+                        شما در کدام دسته قرار دارد ؟</label></div>
+                    <div class="col-sm-4 input-column"><select name="type" class="form-select">
+                        <option value="1" selected="">اجتماعی و فرهنگی</option>
+                        <option value="2">کشاورزی</option>
+                        <option value="3">اقتصادی</option>
+                    </select></div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-sm-4 label-column" style="text-align: right;"><label class="col-form-label"
+                                                                                         for="dropdown-input-field">اگر
+                        آورده شما فیزیکی است عکسی از آن قرار دهید</label></div>
+                    <div class="col-sm-4 label-column" style="text-align: right;">
+                        <div class="upload__box">
+                            <div class="upload__btn-box">
+                                <label class="upload__btn">
+                                    <p style="color:rgb(76,86,94)">انتخاب فایل ها</p>
+                                    <input name="photo" type="file" multiple="" data-max_length="20"
+                                           class="upload__inputfile" name="ali">
+                                </label>
+                            </div>
+                            <div class="upload__img-wrap"></div>
+                        </div>
+
+                        <script src="{% static 'script.js' %}"></script>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-sm-4 label-column" style="text-align: right;"><label class="form-label"
+                                                                                         for="dropdown-input-field">توضیحات
+                        راجب آورده خود*&nbsp;</label><textarea name="description" class="form-control"
+                                                               style="width: 100%;height: 126.4px;"
+                                                               required=""></textarea></div>
+                </div>
+                <div class="form-check d-table" style="text-align: right;"><input name="active_rool"
+                                                                                  class="form-check-input"
+                                                                                  type="checkbox" id="formCheck-1"
+                                                                                  required=""><label
+                        class="form-check-label" for="formCheck-1">شرایط و قوانین زرمیوه را میپذیرم&nbsp;</label></div>
+                <button class="btn btn-light submit-button" type="submit" style="border-radius: 12px;">ثبت اطلاعات
+                </button>
+            </form>
+        </div>
+    </div>
+    <h1 class="d-table justify-content-lg-center"
+        style="color: rgb(76, 86, 94);font-size: 27.88px;border-bottom: 2px solid rgb(75,30,255);padding: 11px;">صندوق
+        شفاف آورده ها</h1>
+    {% for ii in Product %}
+        <div class="d-inline-flex media" style="border-bottom: 1.4px solid rgb(55,99,244);margin-bottom: 10px;">
+            <div><span class="fa-stack fa-lg fa-2x"><i class="fa fa-circle fa-stack-2x text-primary"></i><i
+                    class="fa fa-heart fa-stack-1x fa-inverse"></i></span></div>
+            <div class="media-body">
+                <h4><small class="form-text" style="color: rgb(0,140,39);">با تشکر از</small></h4>
+                <p class="text-end"
+                   style="text-align: right;color: rgb(116,116,116);font-size: 19px;font-weight: bold;margin-bottom: 2px;">{{ ii.name }}</p>
+                <ul class="list-unstyled fa-ul" style="margin-bottom: 0px;">
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor"
+                             viewBox="0 0 16 16" class="bi bi-telephone-fill fa-li text-primary">
+                            <path fill-rule="evenodd"
+                                  d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"></path>
+                        </svg>
+                        <a href="amirsayyad7686@gmail.com">{{ ii.phone }}</a></li>
+                </ul>
+                <p class="text-end" style="text-align: right;color: rgb(0,135,30);font-size: 13px;"> عنوان آورده :&nbsp;&nbsp;<span>{{ ii.type }}</span>
+                </p>
+            </div>
+        </div><a class="d-md-flex justify-content-md-center align-items-md-center" id="wp" target="_blank"
+                 style="background-color: #5bbf21;width: 50px;height: 50px;"><i
+            class="fa fa-whatsapp d-md-flex justify-content-md-center align-items-md-center"
+            style="margin-right: 0px;"></i></a>
+    {% endfor %}
+
+
+    <a class="d-md-flex justify-content-md-center align-items-md-center" id="wp" target="_blank"
+       style="background-color: #5bbf21;width: 50px;height: 50px;"><i
+            class="fa fa-whatsapp d-md-flex justify-content-md-center align-items-md-center"
+            style="margin-right: 0px;"></i></a>
+    <div class="row p-0 m-0">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 d-flex justify-content-center align-items-center align-content-center p-0 m-0"
+             style="border-bottom-width: 1.4px;border-bottom-style: solid;">
+            <p class="p-0 m-0" style="color: #008c0e;">با ما در ارتباط باشید</p><a class="p-0 m-2 d-inline-block"
+                                                                                   href="https://twitter.com/OmoldsCo"
+                                                                                   target="_blank">
+            <h3><i class="fa fa-telegram" style="color: #008c0e;"></i></h3>
+        </a><a class="p-0 m-2 d-inline-block" href="https://plus.google.com/u/0/114804899141677023355" target="_blank">
+            <h3><i class="fa fa-google-plus" style="color: #008c0e;"></i></h3>
+        </a><a class="p-0 m-2 d-inline-block" href="https://www.youtube.com/channel/UCO8bVpiYLrkNhxoQUdyIYEQ"
+               target="_blank">
+            <h3><i class="fa fa-instagram" style="color: #008c0e;"></i></h3>
+        </a>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 align-self-center p-0 m-0"><a class="link-dark"
+                                                                                               href="https://www.jav.com"
+                                                                                               target="_blank">
+            <h6 class="text-center p-0 m-2" style="color: rgb(0,81,162);">تمامی حقوق مادی و معنوی برای جناب حقدان محفوظ
+                است طراحی این اپلیکیشن توسط شرکت فنی مهندسی JAV&nbsp;انجام شده است</h6>
+        </a></div>
+    </div>
+
+    </body>
+
+    </html>
+{% endblock %}

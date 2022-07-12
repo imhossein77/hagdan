@@ -1,0 +1,154 @@
+{% extends 'basewhitoutfooter.html' %}
+{% load static %}
+
+
+    {% block content %}
+    <body style="direction:rtl;">
+
+    <section class="py-5" style="padding: 0px 0px;margin-top: 70px;">
+        <div class="container shadow" style="border-radius: 13px;background: url({% static 'assets/img/bg.jpeg'%}) center / cover no-repeat;height: 409.8px;">
+            <div class="filtr-controls" style="margin-bottom: 88px;margin-top: 15px;">
+                <h2 class="fw-light mb-2" style="font-size: 44.128px;margin-top: 44px;">نمایشگاه خرما</h2><span class="active" data-filter="all" style="font-size: 21px;">تمام محصولات</span><span data-filter="1" style="font-size: 21px;">خرمای شاهانی</span><span data-filter="1" style="font-size: 21px;">خرمای شاهانی</span><span data-filter="2" style="font-size: 21px;">خرمای خاصویی</span>
+            </div>
+        </div>
+    </section>
+    <hr style="height: 3px;background: rgb(67,120,255);">
+    <div class="row product-list" style="margin-top: 0px;margin-right: 0px;margin-left: 0px;">
+        <div class="col col-md-4 col-auto">
+            <p class="text-start d-flex d-lg-flex align-items-lg-end"><a href="#" style="font-size: 19px;">خانه</a><span style="color: rgb(35,126,3);font-size: 19px;">&nbsp;/&nbsp;</span><a href="#" style="font-size: 19px;">نمایشگاه خرما</a><span style="color: rgb(35,126,3);font-size: 19px;">&nbsp;/&nbsp;</span><a href="#" style="font-size: 19px;color: rgb(23,23,23);">خرمای زاهدی</a></p><small class="form-text text-end float-end" style="border-bottom-style: solid;border-bottom-color: rgb(117,166,255);font-size: 18px;font-weight: bold;">فیلتر بر اساس</small><select class="border rounded-0 border-1 form-control" name="sort" style="text-align: right;">
+                <option value="all">بیشترین بازدید</option>
+                <option value="newest">جدید ترین محصولات</option>
+            </select><small class="form-text text-end float-end" style="border-bottom-style: solid;border-bottom-color: rgb(117,166,255);font-size: 18px;font-weight: bold;">کیفیت خرما</small><select class="border rounded-0 border-1 form-control mb-2" name="color" style="text-align: right;border-width: 0;">
+                <option value="all" selected="">درجه 1</option>
+                <option value="2" selected="">درجه 2</option>
+                <option value="3" selected="">درجه 3</option>
+                <option value="4" selected="">سوپر</option>
+            </select>
+        </div>
+        <div class="col col-md-4 col-auto"><small class="form-text text-end float-end" style="border-bottom-style: solid;border-bottom-color: rgb(117,166,255);font-size: 18px;font-weight: bold;">رنگ خرما</small><select class="border rounded-0 border-1 form-control mb-2" name="color" style="text-align: right;border-width: 0px;">
+                <option value="all" selected="">همه</option>
+                <option value="2">تیره</option>
+                <option value="3">روشن</option>
+            </select>
+            <div id="dataTable_length-3" class="dataTables_length" aria-controls="dataTable" style="margin-top: 11px;color: rgb(0,0,0);text-align: right;margin-bottom: 8px;">
+                <div id="pills-with-icons-3">
+                    <ul class="nav nav-pills nav-pills-icons nav-pills-success" role="tablist">
+                        <li class="nav-item"><a class="nav-link active" href="#" role="tab" data-bs-toggle="tab"><i class="fas fa-th-large"></i>نمایش بزرگ</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#" role="tab" data-bs-toggle="tab"><i class="fas fa-th"></i>نمایش کوچک</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col col-md-4 col-auto">
+            <div class="row" style="margin-left: 0px;margin-right: 0px;width: 100%;">
+                <div class="col"><small class="form-text text-end float-end" style="border-bottom-style: solid;border-bottom-color: rgb(117,166,255);font-size: 18px;font-weight: bold;">محصولات منتخب</small></div>
+                <div class="col-md-12" style="padding-right: 0px;padding-left: 0px;">
+                    <div class="card shadow d-flex border-start-primary py-2" style="margin-bottom: 18px;">
+                        <div class="card-body" style="padding-bottom: 0px;padding-top: 0px;padding-right: 0px;padding-left: 0px;">
+                            <div class="row no-gutters" style="margin-left: 0px;margin-right: 0px;">
+                                <div class="col me-2" style="padding: 16px;">
+                                    <div class="text-uppercase text-primary fw-bold text-xs mb-1"></div>
+                                    <div class="text-dark d-flex fw-bold h5 mb-0" style="margin-top: -6px;text-align: right;"><span style="font-size: 14px;"></span>
+                                        <p class="product-price" style="margin-bottom: 0px;text-decoration: line-through;font-style: italic;color: rgb(177,177,177);width: 63.262px;margin-left: 31px;">599.00 </p>
+                                        <p class="d-lg-flex justify-content-lg-center product-price" style="margin-bottom: 4px;width: 66.262px;color: rgb(31,31,31);">5299.00<span>&nbsp; ریال</span> </p>
+                                    </div>
+                                    <p class="product-description" style="margin-bottom: 0px;margin-top: 0px;text-align: right;color: rgb(31,31,31);">خرمای زاهدی&nbsp;</p>
+                                    <div class="product-rating" style="text-align: right;"><span style="color: rgb(35,126,3);">کیفیت :&nbsp;</span><i class="fa fa-star" style="color: rgb(255,138,0);"></i><i class="fa fa-star" style="color: rgb(255,138,0);"></i><i class="fa fa-star" style="color: rgb(255,138,0);"></i><i class="fa fa-star" style="color: rgb(255,138,0);"></i><i class="fa fa-star" style="color: rgb(255,138,0);"></i></div>
+                                </div>
+                                <div class="col-auto"><img class="img-fluid" src="{% static 'assets/img/gift_01.jpg'%}" width="80" height="80"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row product-list" style="margin-top: 0px;margin-right: 0px;margin-left: 0px;">
+        {% for product in productlist %}
+            {% if product.active == True %}
+                  <div class="col-sm-6 col-md-4 product-item" style="margin-right: 0px;margin-left: 0px;">
+            <div class="shadow product-container" style="border-radius: 17px;">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="container">
+                            <div class="row justify-content-center align-items-center fbox3">
+                                <div class="col-auto col-sm-4 d-flex justify-content-center align-items-center align-items-lg-center" style="width: 100%;"><a data-fancybox="gallery" href='{% url 'product:product' product.id%}'><img class="img-fluid" src="{{ product.photo.url }}" alt="Hero Image Music"></a></div>
+                            </div>
+                            <div class="row fbox3">
+                                <div class="col-6 col-sm-4 d-flex justify-content-center align-items-center align-items-lg-center"><a data-fancybox="gallery" href='{% url 'product:product' product.id  %}'><img class="img-fluid" src="{{ product.photo.url }}" alt="Hero Image Music"></a></div>
+                                <div class="col-6 col-sm-4 d-flex justify-content-center align-items-center"><a data-fancybox="gallery" href='{% url 'product:product' product.id  %}'><img class="img-fluid" src="{{ product.photo.url }}" alt="Hero Image Photography"></a></div>
+                                <div class="col-6 col-sm-4 d-flex justify-content-center align-items-center"><a data-fancybox="gallery" href='{% url 'product:product' product.id  %}'><img class="img-fluid" src="{{ product.photo.url }}" alt="Hero Image Photography"></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-8">
+                        <h2 style="margin-top: 16px;"><a href="{% url 'product:product' product.id %}">{{ product.date_type }}</a></h2>
+                    </div>
+                    <div class="col-4"><a class="small-text" href="{% url 'product:product' product.id  %}">{{ product.Crop_location }} </a></div>
+                </div>
+                <div class="product-rating" style="text-align: right;"><span style="color: rgb(35,126,3);">کیفیت :&nbsp;</span><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                <div class="row">
+                    <div class="col-12">
+                        <p class="product-description" style="margin-bottom: 0px;margin-top: 3px;text-align: right;"> میزان رطوبت : &nbsp;<span>{{ product.date_type }}</span></p>
+                        <p class="product-description" style="margin-bottom: 0;margin-top: 0px;text-align: right;"> تاریخ برداشت : &nbsp;<span>{{ product.Around_the_harvest_date }}</span></p>
+                        <p class="product-description" style="margin-bottom: 8px;margin-top: 0px;text-align: right;"> تناژ :  &nbsp;<span>{{ product.Product_tonnage }} </span></p>
+                        <div class="row" style="border-top: 1.4px solid rgb(43,153,255) ;">
+                            <div class="col-6"><button class="btn btn-light" type="button" style="margin-top: 6px;">ثبت خرید</button></div>
+                            <div class="col-6 float-start">
+                                <p class="product-price" style="margin-bottom: 4px;text-decoration: line-through;font-style: italic;color: rgb(177,177,177);width: 63.262px;">{{ product.price }} </p>
+                                <p class="product-price" style="margin-bottom: 4px;width: 66.262px;">{{ product.price }}<span>&nbsp;ریال</span> </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+
+
+
+            {% if productlist.has_other_pages %}
+        <nav class="shadow-lg d-inline-block d-lg-flex justify-content-lg-center" style="height: 40.6px;background: #f2f6ff;">
+        <ul class="pagination">
+
+            {% if productlist.has_previous %}
+                <li class="page-item" ><a class="page-link" href="?page=1">اولین</a></li>
+                <li class="page-item"><a class="page-link" aria-label="Previous" href="?page={{ productlist.previous_page_number }}"><span aria-hidden="true">«</span></a></li>
+            {% endif %}
+            {% for ff in productlist.paginator.page_range %}
+                {% if productlist.number == ff %}
+                <li class="page-item active" ><a class="page-link" href="?page={{ ff }}">{{ ff }}</a></li>
+                {% else %}
+                <li class="page-item" ><a class="page-link" href="?page={{ ff }}">{{ ff }}</a></li>
+                {% endif %}
+            {% endfor %}
+        {% if productlist.has_next %}
+            <li class="page-item"><a class="page-link" aria-label="Next" href="?page={{ productlist.next_page_number }}"><span aria-hidden="true">»</span></a></li>
+        {% endif %}
+
+        </ul>
+        </nav>
+    {% endif %}
+    <div class="row p-0 m-0">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 d-flex justify-content-center align-items-center align-content-center p-0 m-0" style="border-bottom-width: 1.4px;border-bottom-style: solid;">
+            <p class="p-0 m-0" style="color: #008c0e;">با ما در ارتباط باشید</p><a class="p-0 m-2 d-inline-block" href="https://twitter.com/OmoldsCo" target="_blank">
+                <h3><i class="fa fa-telegram" style="color: #008c0e;"></i></h3>
+            </a><a class="p-0 m-2 d-inline-block" href="https://plus.google.com/u/0/114804899141677023355" target="_blank">
+                <h3><i class="fa fa-google-plus" style="color: #008c0e;"></i></h3>
+            </a><a class="p-0 m-2 d-inline-block" href="https://www.youtube.com/channel/UCO8bVpiYLrkNhxoQUdyIYEQ" target="_blank">
+                <h3><i class="fa fa-instagram" style="color: #008c0e;"></i></h3>
+            </a>
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 align-self-center p-0 m-0"><a class="link-dark" href="https://www.jav.com" target="_blank">
+                <h6 class="text-center p-0 m-2" style="color: rgb(0,81,162);">تمامی حقوق مادی و معنوی برای جناب حقدان محفوظ است طراحی این اپلیکیشن توسط شرکت فنی مهندسی JAV&nbsp;انجام شده است</h6>
+            </a></div>
+    </div><a class="d-md-flex justify-content-md-center align-items-md-center" id="wp" target="_blank" style="background-color: #5bbf21;width: 50px;height: 50px;"><i class="fa fa-whatsapp d-md-flex justify-content-md-center align-items-md-center" style="margin-right: 0px;"></i></a>
+
+</body>
+
+</html>
+    {% endblock %}

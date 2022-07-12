@@ -1,0 +1,25 @@
+{% load static %}
+<nav class="navbar navbar-light navbar-expand-md fixed-top d-grid navbar-shrink py-3" id="mainNav"
+     style="border-bottom-right-radius: 31px;border-bottom-left-radius: 31px;padding: 2px 0px;">
+    <div class="container"><a class="navbar-brand d-flex align-items-center" href="{% url 'home:home' %}"><span
+            class="bs-icon-sm bs-icon-rounded bs-icon-primary d-flex justify-content-center align-items-center bs-icon me-2"
+            style="background: url(&quot;{% static 'assets/img/Asset-5-min.png' %}&quot;) center / cover no-repeat;width: 40px;height: 40px;"></span><span
+            style="color: rgb(58,58,58);margin-left: 25px;">Brand</span></a>
+        <div class="collapse navbar-collapse" id="navcol-1">
+            <ul class="navbar-nav mx-auto" style="color: rgb(255,255,255);font-size: 20px;">
+                <li class="nav-item"><a class="nav-link" href="{% url 'home:home' %}"
+                                        style="color: rgb(58,58,58);">خانه</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'input:inputtabel' %}"
+                                        style="color: rgb(58,58,58);">اتاق معماری ایده ها</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" style="color: rgb(58,58,58);">میز آورده ها</a></li>
+                <li class="nav-item"><a class="nav-link active" href="{% url 'product:products' %}"
+                                        style="color: rgb(58,58,58);">نمایشگاه خرما</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'register_product:register_product' %}"
+                                        style="color: rgb(58,58,58);">ثبت محصول</a></li>
+            </ul>
+        </div>
+        <button data-bs-target="#navcol-1" data-bs-toggle="collapse" class="navbar-toggler order-first"><span
+                class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+    </div>
+</nav>
+{#{% if request.resolver_match.url_name == "{% url 'register_product:register_product' %}" %}class="active" {% else %} class="nav-link" {% endif %}#}
